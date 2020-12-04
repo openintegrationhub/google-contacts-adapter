@@ -1,0 +1,43 @@
+{
+  "title": "Connector template",
+  "description": "OIH connector example",
+  "docsUrl": "https://github.com/openintegrationhub/google-contacts-adapter",
+  "buildType": "docker",
+  "credentials": {
+    "fields": {
+      "applicationUid": {
+        "label": "Application uid",
+        "required": false,
+        "viewClass": "TextFieldView",
+        "note": "Application uid",
+        "placeholder": "application123456"
+      },
+      "schema": {
+        "label": "Schema",
+        "required": false,
+        "viewClass": "TextFieldView",
+        "note": "Schema from Meta Data Repository",
+        "placeholder": "address"
+      },
+      "domainId": {
+        "label": "Domain Id",
+        "required": false,
+        "viewClass": "TextFieldView",
+        "note": "Domain Id from Meta Data Repository",
+        "placeholder": "5d3031a20cbe7c00115c7d8f"
+      }
+    }
+  },
+  "triggers": {
+    "getObjects": {
+      "title": "Fetch new and updated objects",
+      "main": "./lib/triggers/getObjects.js"
+    }
+  },
+  "actions": {
+    "upsertPerson": {
+      "title": "Upsert an object in your target application",
+      "main": "./lib/actions/upsertPerson.js"
+    }
+  }
+}
