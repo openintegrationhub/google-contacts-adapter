@@ -1,6 +1,6 @@
 {
   "name": "@oih/google-contacts-adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OIH Google Contacts adapter",
   "homepage": "https://www.openintegrationhub.org/",
   "author": {
@@ -27,7 +27,7 @@
     "npm": ">=5.4"
   },
   "dependencies": {
-    "@openintegrationhub/ferryman": "1.5.1",
+    "@openintegrationhub/ferryman": "^1.5.3",
     "dotenv": "^8.2.0",
     "qs": "6.9.4",
     "request": "2.88.0",
