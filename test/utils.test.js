@@ -22,7 +22,7 @@ describe('Helpers', () => {
 
   it('should get Objects, filtered by timestamp', async () => {
     nock('https://people.googleapis.com', { reqheaders: { authorization: `Bearer ${dummyAccessToken}` } })
-      .filteringPath(path => '/v1/people/me/connections')
+      .filteringPath(() => '/v1/people/me/connections')
       .get('/v1/people/me/connections')
       .reply(200, {
 
@@ -49,6 +49,7 @@ describe('Helpers', () => {
 
     const { objects, newSnapshot } = await getObjects(dummyAccessToken, {});
     console.log('Objects fetched', objects);
+    console.log(newSnapshot);
     expect(objects).to.have.lengthOf(3);
   });
 
