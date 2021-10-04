@@ -27,7 +27,7 @@
     "npm": ">=5.4"
   },
   "dependencies": {
-    "@openintegrationhub/ferryman": "^1.6.2",
+    "@openintegrationhub/ferryman": "^1.6.4",
     "dotenv": "^8.2.0",
     "qs": "6.9.4",
     "request": "2.88.0",
