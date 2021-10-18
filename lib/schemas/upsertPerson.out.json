@@ -1,0 +1,258 @@
+{
+  "type": "object",
+  "properties": {
+    "resourceName": {
+      "type": "string",
+      "example": "people/101841563665030654758"
+    },
+    "etag": {
+      "type": "string",
+      "example": "%EhABAgMGCQsMDRAuNTc9Pj9AGgQBAgUHIgxBcGFiZUdSY21EUT0="
+    },
+    "names": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "primary": { "type": "boolean", "example": true },
+              "source": {
+                "type": {
+                  "type": "string",
+                  "example": "approved"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "approved"
+                }
+              }
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "example": "approved"
+          },
+          "familyName": {
+            "type": "string",
+            "example": "approved"
+          },
+          "givenName": {
+            "type": "string",
+            "example": "approved"
+          },
+          "displayNameLastFirst": {
+            "type": "string",
+            "example": "approved"
+          },
+          "unstructuredName": {
+            "type": "string",
+            "example": "approved"
+          }
+        }
+      }
+    },
+    "emailAddresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "primary": { "type": "boolean", "example": true },
+              "verified": { "type": "boolean", "example": true },
+              "sourcePrimary": { "type": "boolean", "example": true },
+              "source": {
+                "type": {
+                  "type": "string",
+                  "example": "approved"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "approved"
+                }
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "example": "johnylaf94@gmail.com"
+          }
+        }
+      }
+    },
+    "adresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "primary": { "type": "boolean", "example": true },
+              "source": {
+                "type": {
+                  "type": "string",
+                  "example": "approved"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "approved"
+                }
+              }
+            }
+          },
+          "formattedValue": {
+            "type": "string",
+            "example": "approved"
+          },
+          "type": {
+            "type": "string",
+            "example": "approved"
+          },
+          "formattedType": {
+            "type": "string",
+            "example": "approved"
+          },
+          "poBox": {
+            "type": "string",
+            "example": "approved"
+          },
+          "streetAddress": {
+            "type": "string",
+            "example": "approved"
+          },
+          "extendedAddress": {
+            "type": "string",
+            "example": "approved"
+          },
+          "city": {
+            "type": "string",
+            "example": "approved"
+          },
+          "region": {
+            "type": "string",
+            "example": "approved"
+          },
+          "postalCode": {
+            "type": "string",
+            "example": "approved"
+          },
+          "countryCode": {
+            "type": "string",
+            "example": "approved"
+          }
+        }
+      }
+    },
+    "phoneNumbers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "primary": { "type": "boolean", "example": true },
+              "source": {
+                "type": {
+                  "type": "string",
+                  "example": "approved"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "approved"
+                }
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "example": "approved"
+          },
+          "canonicalForm": {
+            "type": "string",
+            "example": "approved"
+          },
+          "type": {
+            "type": "string",
+            "example": "approved"
+          },
+          "formattedType": {
+            "type": "string",
+            "example": "approved"
+          }
+        }
+      }
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "primary": { "type": "boolean", "example": true },
+              "source": {
+                "type": {
+                  "type": "string",
+                  "example": "approved"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "approved"
+                }
+              }
+            }
+          },
+          "url": {
+            "type": "string",
+            "example": "https://lh3.googleusercontent.com/a/AATXAJzTAb8uw7qs29BKGcq0jNMn-FmiZ66D6fL6xn5D=s100"
+          },
+          "default": { "type": "boolean", "example": true }
+        }
+      }
+    },
+    "memberships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "primary": { "type": "boolean", "example": true },
+              "source": {
+                "type": {
+                  "type": "string",
+                  "example": "approved"
+                },
+                "id": {
+                  "type": "string",
+                  "example": "approved"
+                }
+              }
+            }
+          },
+          "contactGroupMembership": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "contactGroupId": "string",
+                "example": "myContacts"
+              },
+              "contactGroupResourceName": {
+                "type": "string",
+                "example": "contactGroups/myContacts"
+              }
+            }
+          },
+          "default": { "type": "boolean", "example": true }
+        }
+      }
+    }
+  }
+}

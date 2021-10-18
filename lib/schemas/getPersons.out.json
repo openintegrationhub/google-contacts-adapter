@@ -1,181 +1,377 @@
 {
     "type":"object",
     "properties": {
-        "resourceName": "string",
-        "etag": "string",
-        "metadata": {
-          object (PersonMetadata)
+        "resourceName": {
+          "type": "string",
+          "example": "people/101841563665030654758"
         },
-        "addresses": [
-          {
-            object (Address)
+        "etag": {
+          "type": "string",
+          "example": "%EhABAgMGCQsMDRAuNTc9Pj9AGgQBAgUHIgxBcGFiZUdSY21EUT0="
+        },
+        "names": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "primary": { "type": "boolean", "example": true },
+                  "source": {
+                    "type": {
+                      "type": "string",
+                      "example": "approved"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "approved"
+                    }
+                  }
+                }
+              },
+              "displayName": {
+                "type": "string",
+                "example": "approved"
+              },
+              "familyName": {
+                "type": "string",
+                "example": "approved"
+              },
+              "givenName": {
+                "type": "string",
+                "example": "approved"
+              },
+              "displayNameLastFirst": {
+                "type": "string",
+                "example": "approved"
+              },
+              "unstructuredName": {
+                "type": "string",
+                "example": "approved"
+              }
+            }
           }
-        ],
-        "ageRange": enum (AgeRange),
-        "ageRanges": [
-          {
-            object (AgeRangeType)
+        },
+        "photos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "primary": { "type": "boolean", "example": true },
+                  "source": {
+                    "type": {
+                      "type": "string",
+                      "example": "approved"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "approved"
+                    }
+                  }
+                }
+              },
+              "url": {
+                "type": "string",
+                "example": "https://lh3.googleusercontent.com/a/AATXAJzTAb8uw7qs29BKGcq0jNMn-FmiZ66D6fL6xn5D=s100"
+              },
+              "default": { "type": "boolean", "example": true }
+            }
           }
-        ],
-        "biographies": [
-          {
-            object (Biography)
+        },
+        "emailAddresses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "primary": { "type": "boolean", "example": true },
+                  "verified": { "type": "boolean", "example": true },
+                  "sourcePrimary": { "type": "boolean", "example": true },
+                  "source": {
+                    "type": {
+                      "type": "string",
+                      "example": "approved"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "approved"
+                    }
+                  }
+                }
+              },
+              "value": {
+                "type": "string",
+                "example": "johnylaf94@gmail.com"
+              }
+            }
           }
-        ],
-        "birthdays": [
-          {
-            object (Birthday)
+        },
+        "adresses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "primary": { "type": "boolean", "example": true },
+                  "source": {
+                    "type": {
+                      "type": "string",
+                      "example": "approved"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "approved"
+                    }
+                  }
+                }
+              },
+              "formattedValue": {
+                "type": "string",
+                "example": "approved"
+              },
+              "type": {
+                "type": "string",
+                "example": "approved"
+              },
+              "formattedType": {
+                "type": "string",
+                "example": "approved"
+              },
+              "poBox": {
+                "type": "string",
+                "example": "approved"
+              },
+              "streetAddress": {
+                "type": "string",
+                "example": "approved"
+              },
+              "extendedAddress": {
+                "type": "string",
+                "example": "approved"
+              },
+              "city": {
+                "type": "string",
+                "example": "approved"
+              },
+              "region": {
+                "type": "string",
+                "example": "approved"
+              },
+              "postalCode": {
+                "type": "string",
+                "example": "approved"
+              },
+              "countryCode": {
+                "type": "string",
+                "example": "approved"
+              }
+            }
           }
-        ],
-        "braggingRights": [
-          {
-            object (BraggingRights)
+        },
+        "phoneNumbers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "primary": { "type": "boolean", "example": true },
+                  "source": {
+                    "type": {
+                      "type": "string",
+                      "example": "approved"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "approved"
+                    }
+                  }
+                }
+              },
+              "value": {
+                "type": "string",
+                "example": "approved"
+              },
+              "canonicalForm": {
+                "type": "string",
+                "example": "approved"
+              },
+              "type": {
+                "type": "string",
+                "example": "approved"
+              },
+              "formattedType": {
+                "type": "string",
+                "example": "approved"
+              }
+            }
           }
-        ],
-        "calendarUrls": [
-          {
-            object (CalendarUrl)
+        },
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "primary": { "type": "boolean", "example": true },
+                  "source": {
+                    "type": {
+                      "type": "string",
+                      "example": "approved"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "approved"
+                    }
+                  }
+                }
+              },
+              "value": {
+                "type": "string",
+                "example": "approved"
+              },
+              "type": {
+                "type": "string",
+                "example": "approved"
+              },
+              "formattedType": {
+                "type": "string",
+                "example": "approved"
+              }
+            }
           }
-        ],
-        "clientData": [
-          {
-            object (ClientData)
+        },
+        "occupations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "primary": { "type": "boolean", "example": true },
+                  "source": {
+                    "type": {
+                      "type": "string",
+                      "example": "approved"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "approved"
+                    }
+                  }
+                }
+              },
+              "value": {
+                "type": "string",
+                "example": "approved"
+              }
+            }
           }
-        ],
-        "coverPhotos": [
-          {
-            object (CoverPhoto)
+        },
+        "organizations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "primary": { "type": "boolean", "example": true },
+                  "source": {
+                    "type": {
+                      "type": "string",
+                      "example": "approved"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "approved"
+                    }
+                  }
+                }
+              },
+              "type": {
+                "type": "string",
+                "example": "approved"
+              },
+              "formattedType": {
+                "type": "string",
+                "example": "approved"
+              },
+              "name": {
+                "type": "string",
+                "example": "approved"
+              },
+              "phoneticName": {
+                "type": "string",
+                "example": "approved"
+              },
+              "department": {
+                "type": "string",
+                "example": "approved"
+              },
+              "title": {
+                "type": "string",
+                "example": "approved"
+              },
+              "jobDescription": {
+                "type": "string",
+                "example": "approved"
+              },
+              "symbol": {
+                "type": "string",
+                "example": "approved"
+              },
+              "domain": {
+                "type": "string",
+                "example": "approved"
+              },
+              "location": {
+                "type": "string",
+                "example": "approved"
+              },
+              "costCenter": {
+                "type": "string",
+                "example": "approved"
+              },
+              "startDate": {
+                "type": "object",
+                "properties": {
+                  "year": "integer",
+                  "month": "integer",
+                  "day": "integer"
+                },
+                "endDate": {
+                  "type": "object",
+                  "properties": {
+                    "year": "integer",
+                    "month": "integer",
+                    "day": "integer"
+                  }
+                },
+                "current": {
+                  "type": "boolean",
+                  "example": true
+                },
+      
+                "fullTimeEquivalentMillipercent": {
+                  "type": "integer",
+                  "example": 12
+                }
+              }
+            }
           }
-        ],
-        "emailAddresses": [
-          {
-            object (EmailAddress)
-          }
-        ],
-        "events": [
-          {
-            object (Event)
-          }
-        ],
-        "externalIds": [
-          {
-            object (ExternalId)
-          }
-        ],
-        "fileAses": [
-          {
-            object (FileAs)
-          }
-        ],
-        "genders": [
-          {
-            object (Gender)
-          }
-        ],
-        "imClients": [
-          {
-            object (ImClient)
-          }
-        ],
-        "interests": [
-          {
-            object (Interest)
-          }
-        ],
-        "locales": [
-          {
-            object (Locale)
-          }
-        ],
-        "locations": [
-          {
-            object (Location)
-          }
-        ],
-        "memberships": [
-          {
-            object (Membership)
-          }
-        ],
-        "miscKeywords": [
-          {
-            object (MiscKeyword)
-          }
-        ],
-        "names": [
-          {
-            object (Name)
-          }
-        ],
-        "nicknames": [
-          {
-            object (Nickname)
-          }
-        ],
-        "occupations": [
-          {
-            object (Occupation)
-          }
-        ],
-        "organizations": [
-          {
-            object (Organization)
-          }
-        ],
-        "phoneNumbers": [
-          {
-            object (PhoneNumber)
-          }
-        ],
-        "photos": [
-          {
-            object (Photo)
-          }
-        ],
-        "relations": [
-          {
-            object (Relation)
-          }
-        ],
-        "relationshipInterests": [
-          {
-            object (RelationshipInterest)
-          }
-        ],
-        "relationshipStatuses": [
-          {
-            object (RelationshipStatus)
-          }
-        ],
-        "residences": [
-          {
-            object (Residence)
-          }
-        ],
-        "sipAddresses": [
-          {
-            object (SipAddress)
-          }
-        ],
-        "skills": [
-          {
-            object (Skill)
-          }
-        ],
-        "taglines": [
-          {
-            object (Tagline)
-          }
-        ],
-        "urls": [
-          {
-            object (Url)
-          }
-        ],
-        "userDefined": [
-          {
-            object (UserDefined)
-          }
-        ]
-      }
+        }
+      }      
 }
