@@ -1,0 +1,181 @@
+{
+    "type":"object",
+    "properties": {
+        "resourceName": "string",
+        "etag": "string",
+        "metadata": {
+          object (PersonMetadata)
+        },
+        "addresses": [
+          {
+            object (Address)
+          }
+        ],
+        "ageRange": enum (AgeRange),
+        "ageRanges": [
+          {
+            object (AgeRangeType)
+          }
+        ],
+        "biographies": [
+          {
+            object (Biography)
+          }
+        ],
+        "birthdays": [
+          {
+            object (Birthday)
+          }
+        ],
+        "braggingRights": [
+          {
+            object (BraggingRights)
+          }
+        ],
+        "calendarUrls": [
+          {
+            object (CalendarUrl)
+          }
+        ],
+        "clientData": [
+          {
+            object (ClientData)
+          }
+        ],
+        "coverPhotos": [
+          {
+            object (CoverPhoto)
+          }
+        ],
+        "emailAddresses": [
+          {
+            object (EmailAddress)
+          }
+        ],
+        "events": [
+          {
+            object (Event)
+          }
+        ],
+        "externalIds": [
+          {
+            object (ExternalId)
+          }
+        ],
+        "fileAses": [
+          {
+            object (FileAs)
+          }
+        ],
+        "genders": [
+          {
+            object (Gender)
+          }
+        ],
+        "imClients": [
+          {
+            object (ImClient)
+          }
+        ],
+        "interests": [
+          {
+            object (Interest)
+          }
+        ],
+        "locales": [
+          {
+            object (Locale)
+          }
+        ],
+        "locations": [
+          {
+            object (Location)
+          }
+        ],
+        "memberships": [
+          {
+            object (Membership)
+          }
+        ],
+        "miscKeywords": [
+          {
+            object (MiscKeyword)
+          }
+        ],
+        "names": [
+          {
+            object (Name)
+          }
+        ],
+        "nicknames": [
+          {
+            object (Nickname)
+          }
+        ],
+        "occupations": [
+          {
+            object (Occupation)
+          }
+        ],
+        "organizations": [
+          {
+            object (Organization)
+          }
+        ],
+        "phoneNumbers": [
+          {
+            object (PhoneNumber)
+          }
+        ],
+        "photos": [
+          {
+            object (Photo)
+          }
+        ],
+        "relations": [
+          {
+            object (Relation)
+          }
+        ],
+        "relationshipInterests": [
+          {
+            object (RelationshipInterest)
+          }
+        ],
+        "relationshipStatuses": [
+          {
+            object (RelationshipStatus)
+          }
+        ],
+        "residences": [
+          {
+            object (Residence)
+          }
+        ],
+        "sipAddresses": [
+          {
+            object (SipAddress)
+          }
+        ],
+        "skills": [
+          {
+            object (Skill)
+          }
+        ],
+        "taglines": [
+          {
+            object (Tagline)
+          }
+        ],
+        "urls": [
+          {
+            object (Url)
+          }
+        ],
+        "userDefined": [
+          {
+            object (UserDefined)
+          }
+        ]
+      }
+}
