@@ -31,13 +31,20 @@
   "triggers": {
     "getObjects": {
       "title": "Fetch new and updated objects",
-      "main": "./lib/triggers/getObjects.js"
+      "main": "./lib/triggers/getObjects.js",
+      "metadata": {
+        "out":"./lib/schemas/getPerson.out.json"
+      }
     }
   },
   "actions": {
     "upsertPerson": {
       "title": "Upsert an object in your target application",
-      "main": "./lib/actions/upsertPerson.js"
+      "main": "./lib/actions/upsertPerson.js",
+      "metadata": {
+        "in": "./lib/schemas/upsertPerson.in.json",
+        "out":"./lib/schemas/upsertPerson.out.json"
+      }
     }
   }
 }
