@@ -45,6 +45,14 @@
         "in": "./lib/schemas/upsertPerson.in.json",
         "out":"./lib/schemas/upsertPerson.out.json"
       }
+    },
+    "appendToSheet": {
+      "title": "Append all properties of an object to a google sheet",
+      "main": "./lib/actions/appendToSheet.js",
+      "metadata": {
+        "in": "./lib/schemas/appendToSheet.in.json",
+        "out":"./lib/schemas/appendToSheet.out.json"
+      }
     }
   }
 }
