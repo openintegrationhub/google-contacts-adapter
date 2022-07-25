@@ -1,6 +1,6 @@
 {
-  "title": "Connector template",
-  "description": "OIH connector example",
+  "title": "Google Adapter",
+  "description": "Connects to Google API",
   "docsUrl": "https://github.com/openintegrationhub/google-contacts-adapter",
   "buildType": "docker",
   "credentials": {
