@@ -53,6 +53,14 @@
         "in": "./lib/schemas/appendToSheet.in.json",
         "out":"./lib/schemas/appendToSheet.out.json"
       }
+    },
+    "appendTicketToSheet": {
+      "title": "Append all properties of a ticket to a google sheet",
+      "main": "./lib/actions/appendTicketToSheet.js",
+      "metadata": {
+        "in": "./lib/schemas/appendToSheet.in.json",
+        "out":"./lib/schemas/appendToSheet.out.json"
+      }
     }
   }
 }
