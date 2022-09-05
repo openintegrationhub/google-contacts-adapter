@@ -2,7 +2,9 @@
 
 const { expect } = require('chai');
 const nock = require('nock');
-const { getAccessToken, getObjects, upsertObject } = require('./../lib/utils/helpers');
+const {
+  getAccessToken, getObjects, upsertObject, getObjectsFromSheet,
+} = require('./../lib/utils/helpers');
 
 const dummyAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9';
 
@@ -47,10 +49,26 @@ describe('Helpers', () => {
 
       });
 
-    const { objects, newSnapshot } = await getObjects(dummyAccessToken, {});
-    console.log('Objects fetched', objects);
-    console.log(newSnapshot);
+    const { objects } = await getObjects(dummyAccessToken, {});
     expect(objects).to.have.lengthOf(3);
+  });
+
+  it('should get Objects from a sheet', async () => {
+    nock('https://content-sheets.googleapis.com', { reqheaders: { authorization: `Bearer ${dummyAccessToken}` } })
+      .get('/v4/spreadsheets/abcd/values:batchGet?ranges=Sheet1!3:1003&majorDimension=ROWS')
+      .reply(200, {
+        valueRanges: {
+          values: [
+            ['Jane', 'Doe'],
+            ['Some', 'Body'],
+          ],
+        },
+      });
+
+    const objects = await getObjectsFromSheet(dummyAccessToken, { currentRow: 3 }, 'abcd', undefined, ['firstName', 'lastName']);
+    expect(objects).to.have.lengthOf(2);
+    expect(objects[0]).to.deep.equal({ firstName: 'Jane', lastName: 'Doe' });
+    expect(objects[1]).to.deep.equal({ firstName: 'Some', lastName: 'Body' });
   });
 
   xit('should dynamically insert an object', async () => {

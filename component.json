@@ -35,6 +35,10 @@
       "metadata": {
         "out":"./lib/schemas/getPerson.out.json"
       }
+    },
+    "getObjectsFromSheet": {
+      "title": "Fetch rows from a sheet and return them as objects",
+      "main": "./lib/triggers/getObjectsFromSheet.js"
     }
   },
   "actions": {
