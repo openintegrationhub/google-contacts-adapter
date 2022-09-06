@@ -57,12 +57,12 @@ describe('Helpers', () => {
     nock('https://content-sheets.googleapis.com', { reqheaders: { authorization: `Bearer ${dummyAccessToken}` } })
       .get('/v4/spreadsheets/abcd/values:batchGet?ranges=Sheet1!3:1003&majorDimension=ROWS')
       .reply(200, {
-        valueRanges: {
+        valueRanges: [{
           values: [
             ['Jane', 'Doe'],
             ['Some', 'Body'],
           ],
-        },
+        }],
       });
 
     const objects = await getObjectsFromSheet(dummyAccessToken, { currentRow: 3 }, 'abcd', undefined, 'firstName, lastName');
