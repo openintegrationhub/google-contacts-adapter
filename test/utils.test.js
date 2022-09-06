@@ -65,7 +65,7 @@ describe('Helpers', () => {
         },
       });
 
-    const objects = await getObjectsFromSheet(dummyAccessToken, { currentRow: 3 }, 'abcd', undefined, ['firstName', 'lastName']);
+    const objects = await getObjectsFromSheet(dummyAccessToken, { currentRow: 3 }, 'abcd', undefined, 'firstName, lastName');
     expect(objects).to.have.lengthOf(2);
     expect(objects[0]).to.deep.equal({ firstName: 'Jane', lastName: 'Doe' });
     expect(objects[1]).to.deep.equal({ firstName: 'Some', lastName: 'Body' });
