@@ -67,8 +67,8 @@ describe('Helpers', () => {
 
     const objects = await getObjectsFromSheet(dummyAccessToken, { currentRow: 3 }, 'abcd', undefined, 'firstName, lastName');
     expect(objects).to.have.lengthOf(2);
-    expect(objects[0]).to.deep.equal({ firstName: 'Jane', lastName: 'Doe' });
-    expect(objects[1]).to.deep.equal({ firstName: 'Some', lastName: 'Body' });
+    expect(objects[0]).to.deep.equal({ firstname: 'Jane', lastname: 'Doe' });
+    expect(objects[1]).to.deep.equal({ firstname: 'Some', lastname: 'Body' });
   });
 
   xit('should dynamically insert an object', async () => {
